@@ -16,17 +16,36 @@
                 <i class="ri-building-line"></i> Logo
             </h1>
             <!-- Hamburger Menu Icon -->
-            <i class="ri-menu-line md:hidden text-black-500 text-xl p-4"></i>
-            <ul class="md:flex hidden font-medium text-l space-x-4 p-4  ">
-                <li class="hover:text-blue-600"> <a href="#">Home</a></li>
+            <i class=" hamburger ri-menu-line md:hidden text-black-500 text-xl p-4 cursor-pointer"></i>
+            <ul class="md:flex hidden font-medium text-l md:space-x-4 p-4  ">
+                <li class="hover:text-blue-600"><a href="#">Home</a></li>
                 <li class=" hover:text-blue-600"><a href="#">About</a></li>
                 <li class=" hover:text-blue-600"><a href="#">Contact</a></li>
-                <li class=" hover:text-blue-600"> <a href="#">Blog</a></li>
-                <li class=" hover:text-blue-600"> <a href="#">Photo</a></li>
-                <li class=" hover:text-blue-600"> <a href="#">Card</a></li>
+                <li class=" hover:text-blue-600"><a href="#">Blog</a></li>
+                <li class=" hover:text-blue-600"><a href="#">Photo</a></li>
+                <li class=" hover:text-blue-600"><a href="#">Card</a></li>
             </ul>
+            <!-- Mobile Menu -->
+            <div class="mobile-menu md:hidden hidden flex flex-col absolute top-[50px] right-4 rounded-lg text-center p-2 bg-black text-white ">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Blog</a>
+                <a href="#">Photo</a>
+                <a href="#">Card</a>
+            </div>
         </div>
     </nav>
+
+    <script>
+        // Toggle the mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
